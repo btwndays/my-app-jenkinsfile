@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('clone repo and clean') { 
+        stage('Clone Repo and Clean') { 
             steps {
                  bat "rmdir my-app-jenkinsfile /s /q" // inserted this line after my-app-jenkinsfile folder initially created. 
                 // use rmdir /s /q for Windows, rm -rf for linux/mac
@@ -16,7 +16,7 @@ pipeline {
                 bat "mvn test -f my-app-jenkinsfile"
             }
         }
-        stage('Deploy') { 
+        stage('Package') { 
             steps {
                 bat "mvn package -f my-app-jenkinsfile"
             }
