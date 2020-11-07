@@ -8,7 +8,7 @@ pipeline {
                 // /s (Deletes a directory tree (the specified directory and all its subdirectories, including all files)
                 // /q (Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. The /q parameter works only if /s is also specified.)
                 bat "git clone https://github.com/btwndays/my-app-jenkinsfile.git"
-                bat "mvn clean -f my-app"
+                bat "mvn clean -f my-app-jenkinsfile"
             }
         }
         stage('Test') { 
