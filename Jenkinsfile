@@ -13,12 +13,12 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                bat "mvn test -f my-app"
+                bat "mvn test -f my-app-jenkinsfile"
             }
         }
         stage('Deploy') { 
             steps {
-                bat "mvn package -f my-app"
+                bat "mvn package -f my-app-jenkinsfile"
             }
         }
     }
