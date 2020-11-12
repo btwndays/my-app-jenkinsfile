@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repo and Clean') { 
             steps {
-                bat "rmdir my-app-jenkinsfile /s /q" // inserted this line after my-app-jenkinsfile folder initially created. 
+                //bat "rmdir my-app-jenkinsfile /s /q" // inserted this line after my-app-jenkinsfile folder initially created. 
                 // use rmdir /s /q for Windows, rm -rf for linux/mac
                 // /s (Deletes a directory tree (the specified directory and all its subdirectories, including all files)
                 // /q (Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. The /q parameter works only if /s is also specified.)
